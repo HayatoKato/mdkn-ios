@@ -16,6 +16,7 @@
 		1A4E18261A8B8DAF009D12F6 /* mdkn_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */; };
 		1A4E18301A8B8E1F009D12F6 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E182F1A8B8E1F009D12F6 /* ArticleTableViewCell.swift */; };
 		1A4E18321A8BB001009D12F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18311A8BB001009D12F6 /* DetailViewController.swift */; };
+		1ABEE7A31A8BD58500082DD0 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEE7A21A8BD58500082DD0 /* json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mdkn_iosTests.swift; sourceTree = "<group>"; };
 		1A4E182F1A8B8E1F009D12F6 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleTableViewCell.swift; path = "../../mdkn-ios-bk/mdkn-ios/ArticleTableViewCell.swift"; sourceTree = "<group>"; };
 		1A4E18311A8BB001009D12F6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1ABEE7A21A8BD58500082DD0 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = json.swift; path = "../../swift-json/json/json.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		1A4E18091A8B8DAF009D12F6 /* mdkn-ios */ = {
 			isa = PBXGroup;
 			children = (
+				1ABEE79F1A8BCFF200082DD0 /* Source */,
 				1A4E180C1A8B8DAF009D12F6 /* AppDelegate.swift */,
 				1A4E18111A8B8DAF009D12F6 /* ViewController.swift */,
 				1A4E18311A8BB001009D12F6 /* DetailViewController.swift */,
@@ -119,6 +122,14 @@
 				1A4E18241A8B8DAF009D12F6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1ABEE79F1A8BCFF200082DD0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1ABEE7A21A8BD58500082DD0 /* json.swift */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +235,7 @@
 				1A4E18301A8B8E1F009D12F6 /* ArticleTableViewCell.swift in Sources */,
 				1A4E18121A8B8DAF009D12F6 /* ViewController.swift in Sources */,
 				1A4E18321A8BB001009D12F6 /* DetailViewController.swift in Sources */,
+				1ABEE7A31A8BD58500082DD0 /* json.swift in Sources */,
 				1A4E180D1A8B8DAF009D12F6 /* AppDelegate.swift in Sources */,
 				1A4E18101A8B8DAF009D12F6 /* mdkn_ios.xcdatamodeld in Sources */,
 			);
@@ -417,6 +429,7 @@
 				1A4E182B1A8B8DAF009D12F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A4E182C1A8B8DAF009D12F6 /* Build configuration list for PBXNativeTarget "mdkn-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +438,7 @@
 				1A4E182E1A8B8DAF009D12F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

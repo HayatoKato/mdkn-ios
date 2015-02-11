@@ -13,7 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var logo: UIImageView!
     @IBAction func backToList(segue: UIStoryboardSegue) {}
 
-    var indexPathRow: Int?
+    var toDetailObjId: Int?
+    let articles = JSON.fromURL("http://sawa-admin.kan-wing.com/mdkn-ios-new.php")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,30 +23,42 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        var number = 0
+        for (key, value) in articles {
+            number++
+        }
+        return number
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var articleCell = tableView.dequeueReusableCellWithIdentifier("article") as ArticleTableViewCell
-        articleCell.articleTitle.text = "人気のロリポップ作りました！　～キットの型を利用してアレンジ☆"
-        articleCell.articleImage.image = UIImage(named: "article-image")
+        
+        // Set title from json data
+        articleCell.articleTitle.text = articles[indexPath.row]["title"].asString
+        
+        // Set image fron json data
+        var articleImageUrl = NSURL(string: articles[indexPath.row]["image"].asString!)
+        var articleImageData = NSData(contentsOfURL: articleImageUrl!)
+        articleCell.articleImage.image = UIImage(data: articleImageData!)
+        
         return articleCell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 90.0
+        return 100.0
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        indexPathRow = indexPath.row
+        // Set indexPath to Detail Controller
+        var toDetailObjIdStr:String! = articles[indexPath.row]["articleId"].asString
+        toDetailObjId = toDetailObjIdStr.toInt()
         performSegueWithIdentifier("toDetailViewController", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toDetailViewController") {
             let detailViewController: DetailViewController = segue.destinationViewController as DetailViewController
-            detailViewController.objId = indexPathRow
+            detailViewController.objId = toDetailObjId
         }
     }
     
