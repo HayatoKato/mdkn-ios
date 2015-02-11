@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var logo: UIImageView!
+    @IBAction func backToList(segue: UIStoryboardSegue) {}
+
+    var indexPathRow: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 90.0
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        indexPathRow = indexPath.row
+        performSegueWithIdentifier("toDetailViewController", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "toDetailViewController") {
+            let detailViewController: DetailViewController = segue.destinationViewController as DetailViewController
+            detailViewController.objId = indexPathRow
+        }
     }
     
     override func prefersStatusBarHidden() -> Bool {

@@ -15,6 +15,7 @@
 		1A4E181A1A8B8DAF009D12F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4E18181A8B8DAF009D12F6 /* LaunchScreen.xib */; };
 		1A4E18261A8B8DAF009D12F6 /* mdkn_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */; };
 		1A4E18301A8B8E1F009D12F6 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E182F1A8B8E1F009D12F6 /* ArticleTableViewCell.swift */; };
+		1A4E18321A8BB001009D12F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18311A8BB001009D12F6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		1A4E18241A8B8DAF009D12F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mdkn_iosTests.swift; sourceTree = "<group>"; };
 		1A4E182F1A8B8E1F009D12F6 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleTableViewCell.swift; path = "../../mdkn-ios-bk/mdkn-ios/ArticleTableViewCell.swift"; sourceTree = "<group>"; };
+		1A4E18311A8BB001009D12F6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				1A4E180C1A8B8DAF009D12F6 /* AppDelegate.swift */,
 				1A4E18111A8B8DAF009D12F6 /* ViewController.swift */,
+				1A4E18311A8BB001009D12F6 /* DetailViewController.swift */,
 				1A4E182F1A8B8E1F009D12F6 /* ArticleTableViewCell.swift */,
 				1A4E18131A8B8DAF009D12F6 /* Main.storyboard */,
 				1A4E18161A8B8DAF009D12F6 /* Images.xcassets */,
@@ -220,6 +223,7 @@
 			files = (
 				1A4E18301A8B8E1F009D12F6 /* ArticleTableViewCell.swift in Sources */,
 				1A4E18121A8B8DAF009D12F6 /* ViewController.swift in Sources */,
+				1A4E18321A8BB001009D12F6 /* DetailViewController.swift in Sources */,
 				1A4E180D1A8B8DAF009D12F6 /* AppDelegate.swift in Sources */,
 				1A4E18101A8B8DAF009D12F6 /* mdkn_ios.xcdatamodeld in Sources */,
 			);
