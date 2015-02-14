@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var navigationController:SwipeBetweenViewControllers = SwipeBetweenViewControllers(rootViewController: pageController)
         
         // Override point for customization after application launch.
-        var demo:ViewController = ViewController()
+        var demo:ArticleViewController = ArticleViewController()
         var demo2:UIViewController = UIViewController()
         var demo3:UIViewController = UIViewController()
         var demo4:UIViewController = UIViewController()

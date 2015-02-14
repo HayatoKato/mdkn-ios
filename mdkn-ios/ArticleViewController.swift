@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ArticleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var toDetailObjId: Int?
 
@@ -43,21 +43,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             articleCell = tableView.dequeueReusableCellWithIdentifier("Article1x1TableViewCell") as Article1x1TableViewCell
         }
-
+        
         articleCell.titleLabel?.text = articles[indexPath.row]["title"].asString
+        articleCell.userLabel?.text = articles[indexPath.row]["author_nickname"].asString
+        
         var articleImageUrl = NSURL(string: articles[indexPath.row]["image"].asString!)
         var articleImageData = NSData(contentsOfURL: articleImageUrl!)
         articleCell.mainImage?.image = UIImage(data: articleImageData!)
+        
+        var articleAuthorImageUrl = NSURL(string: articles[indexPath.row]["author_image"].asString!)
+        var articleAuthorImageData = NSData(contentsOfURL: articleAuthorImageUrl!)
+        articleCell.userImage?.image = UIImage(data: articleAuthorImageData!)
         
         return articleCell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 250.0
+            return 260
         }
         
-        return 100.0
+        return 100
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

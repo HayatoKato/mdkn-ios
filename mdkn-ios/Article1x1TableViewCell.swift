@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class Article1x1TableViewCell: ArticleTableViewCell {
 
@@ -14,9 +15,20 @@ class Article1x1TableViewCell: ArticleTableViewCell {
     let marginTop: CGFloat = 8
     let marginLeft: CGFloat = 8
     let marginLabelLeft: CGFloat = 10
+    let titleLabelTop: CGFloat = -12
+    let titleLabelHeight: CGFloat = 40
+    let userImageTop: CGFloat = 58
+    let userImageLength: CGFloat = 15
+    let userLabelTop: CGFloat = 50
+    let userLabelMarginLeft: CGFloat = 6
+    let userLabelHeight: CGFloat = 30
     
     func getImageLength() ->CGFloat {
         return cellHeight - (marginTop * 2)
+    }
+    
+    func getRightAreaLeft() ->CGFloat {
+        return marginLeft + getImageLength() + marginLabelLeft
     }
 
     override func initMainImageView() {
@@ -26,13 +38,30 @@ class Article1x1TableViewCell: ArticleTableViewCell {
     }
     
     override func initTitleLabel() {
-        var labelLeft = marginLeft + getImageLength() + marginLabelLeft
-        var labelWidth = cellWidth! - getImageLength() - (marginLeft * 2)
-        var labelHeight = cellHeight - marginTop
-        titleLabel = UILabel(frame: CGRectMake(labelLeft, 0, labelWidth, labelHeight))
+        var titleLabelWidth = cellWidth! - getImageLength() - (marginLeft * 2)
+        var titleLabelHeight = cellHeight - marginTop
+        titleLabel = UILabel(frame: CGRectMake(getRightAreaLeft(), titleLabelTop, titleLabelWidth, titleLabelHeight))
         titleLabel?.font = UIFont(name: "HiraKakuProN-W3", size: 14)
-        titleLabel?.numberOfLines = 3
-        titleLabel?.lineBreakMode = .ByWordWrapping
+        titleLabel?.numberOfLines = 2
         self.addSubview(titleLabel!)
-    } 
+    }
+    
+    override func initUserImage() {
+        userImage = UIImageView(frame: CGRectMake(getRightAreaLeft(), userImageTop, userImageLength, userImageLength))
+        userImage?.contentMode = .ScaleAspectFill
+        userImage?.layer.masksToBounds = false
+        userImage?.layer.cornerRadius = userImageLength / 2
+        userImage?.clipsToBounds = true
+        self.addSubview(userImage!)
+    }
+    
+    override func initUserLabel() {
+        var userLabelLeft = getRightAreaLeft() + userImageLength + userLabelMarginLeft
+        var userLabelWidth = cellWidth! - getImageLength() - (marginLeft * 2)
+        userLabel = UILabel(frame: CGRectMake(userLabelLeft, userLabelTop, userLabelWidth, userLabelHeight))
+        userLabel?.font = UIFont(name: "HiraKakuProN-W3", size: 12)
+        userLabel?.textColor = UIColor.grayColor()
+        userLabel?.numberOfLines = 1
+        self.addSubview(userLabel!)
+    }
 }
