@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  mdkn-ios
 //
-//  Created by 加藤羽也人 on 2015/02/09.
+//  Created by Hayato Kato on 2015/02/09.
 //  Copyright (c) 2015年 Hayato Kato. All rights reserved.
 //
 
@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet var logo: UIImageView!
-    @IBAction func backToList(segue: UIStoryboardSegue) {}
-
     var toDetailObjId: Int?
+
     let articles = JSON.fromURL("http://sawa-admin.kan-wing.com/mdkn-ios-new.php")
+    let marginTop: CGFloat = 22
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logo.image = UIImage(named: "logo")
+        var articleTable: UITableView = UITableView(frame: CGRectMake(0, marginTop, self.view.bounds.width, self.view.bounds.height))
+        articleTable.dataSource = self
+        articleTable.delegate = self
+        
+        articleTable.registerClass(Article1x1TableViewCell.classForCoder(), forCellReuseIdentifier: "Article1x1TableViewCell")
+        articleTable.registerClass(ArticleBigTableViewCell.classForCoder(), forCellReuseIdentifier: "ArticleBigTableViewCell")
+        self.view.addSubview(articleTable)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,32 +36,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var articleCell = tableView.dequeueReusableCellWithIdentifier("article") as ArticleTableViewCell
         
-        // Set title from json data
-        articleCell.articleTitle.text = articles[indexPath.row]["title"].asString
-        
-        // Set image fron json data
+        var articleCell: ArticleTableViewCell
+        if indexPath.row == 0 {
+            articleCell = tableView.dequeueReusableCellWithIdentifier("ArticleBigTableViewCell") as ArticleBigTableViewCell
+        } else {
+            articleCell = tableView.dequeueReusableCellWithIdentifier("Article1x1TableViewCell") as Article1x1TableViewCell
+        }
+
+        articleCell.titleLabel?.text = articles[indexPath.row]["title"].asString
         var articleImageUrl = NSURL(string: articles[indexPath.row]["image"].asString!)
         var articleImageData = NSData(contentsOfURL: articleImageUrl!)
-        articleCell.articleImage.image = UIImage(data: articleImageData!)
+        articleCell.mainImage?.image = UIImage(data: articleImageData!)
         
         return articleCell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 250.0
+        }
+        
         return 100.0
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // Set indexPath to Detail Controller
         var toDetailObjIdStr:String! = articles[indexPath.row]["articleId"].asString
         toDetailObjId = toDetailObjIdStr.toInt()
         performSegueWithIdentifier("toDetailViewController", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toDetailViewController") {
+        if segue.identifier == "toDetailViewController" {
             let detailViewController: DetailViewController = segue.destinationViewController as DetailViewController
             detailViewController.objId = toDetailObjId
         }
@@ -68,9 +79,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    
 }
 

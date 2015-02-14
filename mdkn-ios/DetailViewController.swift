@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  mdkn-ios
 //
-//  Created by 加藤羽也人 on 2015/02/12.
+//  Created by Hayato Kato on 2015/02/12.
 //  Copyright (c) 2015年 Hayato Kato. All rights reserved.
 //
 

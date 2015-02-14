@@ -10,14 +10,18 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XOf-PI-Mq0">
-                    <rect key="frame" x="48" y="200" width="385" height="157"/>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9K1-cQ-ld6">
+                    <rect key="frame" x="84" y="137" width="312" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="312" id="XUc-4c-lPv"/>
+                        <constraint firstAttribute="height" constant="58" id="fVh-FD-49u"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="XOf-PI-Mq0" secondAttribute="centerX" id="LnH-4h-vdh"/>
-                <constraint firstItem="XOf-PI-Mq0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="200" id="qxT-JF-jPK"/>
+                <constraint firstAttribute="centerX" secondItem="9K1-cQ-ld6" secondAttribute="centerX" id="5Jq-4a-MWn"/>
+                <constraint firstItem="9K1-cQ-ld6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="137" id="v1N-s7-X5s"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -25,6 +29,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo" width="385" height="157"/>
+        <image name="logo" width="208" height="39"/>
     </resources>
 </document>

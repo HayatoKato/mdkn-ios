@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2BA7081A8EF63F0088B300 /* SwipeBetweenViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA7071A8EF63F0088B300 /* SwipeBetweenViewControllers.swift */; };
+		1A2BA70F1A8F2EBE0088B300 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA70D1A8F2EBE0088B300 /* ArticleTableViewCell.swift */; };
+		1A2BA71A1A8F653D0088B300 /* UIColor+mdkn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA7191A8F653D0088B300 /* UIColor+mdkn.swift */; };
+		1A2BA71C1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA71B1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift */; };
+		1A2BA71E1A8FBE4C0088B300 /* Article1x1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA71D1A8FBE4C0088B300 /* Article1x1TableViewCell.swift */; };
 		1A4E180D1A8B8DAF009D12F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E180C1A8B8DAF009D12F6 /* AppDelegate.swift */; };
 		1A4E18101A8B8DAF009D12F6 /* mdkn_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E180E1A8B8DAF009D12F6 /* mdkn_ios.xcdatamodeld */; };
 		1A4E18121A8B8DAF009D12F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18111A8B8DAF009D12F6 /* ViewController.swift */; };
@@ -14,7 +19,6 @@
 		1A4E18171A8B8DAF009D12F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4E18161A8B8DAF009D12F6 /* Images.xcassets */; };
 		1A4E181A1A8B8DAF009D12F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4E18181A8B8DAF009D12F6 /* LaunchScreen.xib */; };
 		1A4E18261A8B8DAF009D12F6 /* mdkn_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */; };
-		1A4E18301A8B8E1F009D12F6 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E182F1A8B8E1F009D12F6 /* ArticleTableViewCell.swift */; };
 		1A4E18321A8BB001009D12F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18311A8BB001009D12F6 /* DetailViewController.swift */; };
 		1ABEE7A31A8BD58500082DD0 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEE7A21A8BD58500082DD0 /* json.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A2BA7071A8EF63F0088B300 /* SwipeBetweenViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SwipeBetweenViewControllers.swift; path = ../../SwipeBetweenViewControllers/SwipeBetweenViewControllers/SwipeBetweenViewControllers.swift; sourceTree = "<group>"; };
+		1A2BA70D1A8F2EBE0088B300 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		1A2BA7191A8F653D0088B300 /* UIColor+mdkn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+mdkn.swift"; sourceTree = "<group>"; };
+		1A2BA71B1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleBigTableViewCell.swift; sourceTree = "<group>"; };
+		1A2BA71D1A8FBE4C0088B300 /* Article1x1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article1x1TableViewCell.swift; sourceTree = "<group>"; };
 		1A4E18071A8B8DAF009D12F6 /* mdkn-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mdkn-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4E180B1A8B8DAF009D12F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A4E180C1A8B8DAF009D12F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +50,6 @@
 		1A4E181F1A8B8DAF009D12F6 /* mdkn-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mdkn-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4E18241A8B8DAF009D12F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mdkn_iosTests.swift; sourceTree = "<group>"; };
-		1A4E182F1A8B8E1F009D12F6 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleTableViewCell.swift; path = "../../mdkn-ios-bk/mdkn-ios/ArticleTableViewCell.swift"; sourceTree = "<group>"; };
 		1A4E18311A8BB001009D12F6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1ABEE7A21A8BD58500082DD0 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = json.swift; path = "../../swift-json/json/json.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2BA7111A8F532D0088B300 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1A2BA7191A8F653D0088B300 /* UIColor+mdkn.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		1A4E17FE1A8B8DAF009D12F6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,11 +101,15 @@
 		1A4E18091A8B8DAF009D12F6 /* mdkn-ios */ = {
 			isa = PBXGroup;
 			children = (
-				1ABEE79F1A8BCFF200082DD0 /* Source */,
 				1A4E180C1A8B8DAF009D12F6 /* AppDelegate.swift */,
+				1ABEE79F1A8BCFF200082DD0 /* Source */,
+				1A2BA7111A8F532D0088B300 /* Config */,
 				1A4E18111A8B8DAF009D12F6 /* ViewController.swift */,
+				1A2BA7071A8EF63F0088B300 /* SwipeBetweenViewControllers.swift */,
 				1A4E18311A8BB001009D12F6 /* DetailViewController.swift */,
-				1A4E182F1A8B8E1F009D12F6 /* ArticleTableViewCell.swift */,
+				1A2BA70D1A8F2EBE0088B300 /* ArticleTableViewCell.swift */,
+				1A2BA71D1A8FBE4C0088B300 /* Article1x1TableViewCell.swift */,
+				1A2BA71B1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift */,
 				1A4E18131A8B8DAF009D12F6 /* Main.storyboard */,
 				1A4E18161A8B8DAF009D12F6 /* Images.xcassets */,
 				1A4E18181A8B8DAF009D12F6 /* LaunchScreen.xib */,
@@ -232,12 +252,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A4E18301A8B8E1F009D12F6 /* ArticleTableViewCell.swift in Sources */,
 				1A4E18121A8B8DAF009D12F6 /* ViewController.swift in Sources */,
 				1A4E18321A8BB001009D12F6 /* DetailViewController.swift in Sources */,
 				1ABEE7A31A8BD58500082DD0 /* json.swift in Sources */,
 				1A4E180D1A8B8DAF009D12F6 /* AppDelegate.swift in Sources */,
+				1A2BA71C1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift in Sources */,
 				1A4E18101A8B8DAF009D12F6 /* mdkn_ios.xcdatamodeld in Sources */,
+				1A2BA7081A8EF63F0088B300 /* SwipeBetweenViewControllers.swift in Sources */,
+				1A2BA71E1A8FBE4C0088B300 /* Article1x1TableViewCell.swift in Sources */,
+				1A2BA70F1A8F2EBE0088B300 /* ArticleTableViewCell.swift in Sources */,
+				1A2BA71A1A8F653D0088B300 /* UIColor+mdkn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
