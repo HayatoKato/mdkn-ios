@@ -70,12 +70,9 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
         var toDetailObjIdStr:String! = articles[indexPath.row]["articleId"].asString
         toDetailObjId = toDetailObjIdStr.toInt()
         let detailViewController = DetailViewController()
+        detailViewController.objId = toDetailObjId
+        detailViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(detailViewController, animated: true, completion: nil)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let detailViewController: DetailViewController = segue.destinationViewController as DetailViewController
-            detailViewController.objId = toDetailObjId
     }
     
     override func prefersStatusBarHidden() -> Bool {

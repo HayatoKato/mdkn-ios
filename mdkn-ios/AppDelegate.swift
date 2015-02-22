@@ -33,14 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var demo2:UIViewController = UIViewController()
         var demo3:UIViewController = UIViewController()
         var demo4:UIViewController = UIViewController()
-        var demo5:UIViewController = UIViewController()
+       // var demo5:UIViewController = UIViewController()
 //        demo.view.backgroundColor = UIColor.redColor()
         demo2.view.backgroundColor = UIColor.whiteColor()
         demo3.view.backgroundColor = UIColor.grayColor()
         demo4.view.backgroundColor = UIColor.orangeColor()
-        demo5.view.backgroundColor = UIColor.brownColor()
+       // demo5.view.backgroundColor = UIColor.brownColor()
         
-        navigationController.viewControllerArray = [demo,demo2,demo3,demo4,demo5]
+        navigationController.viewControllerArray = [demo,demo2,demo3,demo4]
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()

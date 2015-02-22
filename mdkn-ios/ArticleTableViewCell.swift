@@ -27,7 +27,7 @@ class ArticleTableViewCell: UITableViewCell {
     }
 
     func initCell() {
-        self.backgroundColor = UIColor.cellBackColor()
+        self.backgroundColor = UIColor.cellBackgroundColor()
         initMainImageView()
         initTitleLabel()
         initUserImage()
