@@ -11,7 +11,6 @@ import UIKit
 class ArticleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var toDetailObjId: Int?
-
     let articles = JSON.fromURL("http://sawa-admin.kan-wing.com/mdkn-ios-new.php")
     let marginTop: CGFloat = 22
     
@@ -67,16 +66,16 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
         var toDetailObjIdStr:String! = articles[indexPath.row]["articleId"].asString
         toDetailObjId = toDetailObjIdStr.toInt()
-        performSegueWithIdentifier("toDetailViewController", sender: nil)
+        let detailViewController = DetailViewController()
+        self.presentViewController(detailViewController, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toDetailViewController" {
-            let detailViewController: DetailViewController = segue.destinationViewController as DetailViewController
+        let detailViewController: DetailViewController = segue.destinationViewController as DetailViewController
             detailViewController.objId = toDetailObjId
-        }
     }
     
     override func prefersStatusBarHidden() -> Bool {
