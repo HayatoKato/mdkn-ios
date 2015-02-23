@@ -34,7 +34,8 @@ extension UIColor {
     }
     
     class func textAreaBackColor() -> UIColor {
-        return UIColor.mdknPinkColor()
+        return UIColor(red:223/255.0, green:124/255.0, blue:170/255.0, alpha: 0.8)
+
     }
     
     /******************** Table Cell *****************************/

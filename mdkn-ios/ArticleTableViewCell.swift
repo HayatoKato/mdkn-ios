@@ -45,6 +45,24 @@ class ArticleTableViewCell: UITableViewCell {
     
     func initUserLabel() {
     }
+    
+    func loadMainImage(image: String!) {
+        var mainImageUrl = NSURL(string: image)
+        var mainImageReq = NSURLRequest(URL: mainImageUrl!)
+        NSURLConnection.sendAsynchronousRequest(mainImageReq, queue: NSOperationQueue.mainQueue()){
+            (res, data, err) in
+            self.mainImage!.image = UIImage(data:data)
+        }
+    }
+    
+    func loadUserImage(image: String!) {
+        var userImageUrl = NSURL(string: image)
+        var userImageReq = NSURLRequest(URL: userImageUrl!)
+        NSURLConnection.sendAsynchronousRequest(userImageReq, queue: NSOperationQueue.mainQueue()){
+            (res, data, err) in
+            self.userImage!.image = UIImage(data:data)
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

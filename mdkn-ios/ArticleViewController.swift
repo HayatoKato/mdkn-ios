@@ -45,15 +45,8 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
         
         articleCell.titleLabel?.text = articles[indexPath.row]["title"].asString
         articleCell.userLabel?.text = articles[indexPath.row]["author_nickname"].asString
-        
-        var articleImageUrl = NSURL(string: articles[indexPath.row]["image"].asString!)
-        var articleImageData = NSData(contentsOfURL: articleImageUrl!)
-        articleCell.mainImage?.image = UIImage(data: articleImageData!)
-        
-        var articleAuthorImageUrl = NSURL(string: articles[indexPath.row]["author_image"].asString!)
-        var articleAuthorImageData = NSData(contentsOfURL: articleAuthorImageUrl!)
-        articleCell.userImage?.image = UIImage(data: articleAuthorImageData!)
-        
+        articleCell.loadMainImage(articles[indexPath.row]["image"].asString!)
+        articleCell.loadUserImage(articles[indexPath.row]["author_image"].asString!)
         return articleCell
     }
     
