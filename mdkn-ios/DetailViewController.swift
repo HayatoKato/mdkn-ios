@@ -35,15 +35,15 @@ class DetailViewController: UIViewController {
         progressBar = UIProgressView(frame: CGRectMake(0, 0, screenWidth!, progressBarHeight))
         progressBar!.progressTintColor = UIColor.mdknPinkColor()
         progressBar!.trackTintColor = UIColor.whiteColor()
-        progressBar!.transform = CGAffineTransformMakeScale(1.0, 1.0)
-        progressBar!.setProgress(2.0, animated: true)
+        progressBar!.setProgress(1.0, animated: true)
+        progressBar!.transform = CGAffineTransformMakeScale(1.0, 2.0)
         self.view.addSubview(progressBar!)
     }
     
     func initWebView() {
         wkWebview = WKWebView(frame: CGRectMake(0, progressBarHeight, screenWidth!, screenHeight!))
         if let objIdNotOptional = objId {
-            var articleDetailUrl = NSURL(string: "http://kurashinista.jp/sp/articles/detail/" + objIdNotOptional.description + "#articles-with-the-same-category")
+            var articleDetailUrl = NSURL(string: "http://kurashinista.jp/sp/articles/detail/" + objIdNotOptional.description)
             var articleDetailUrlReq = NSURLRequest(URL: articleDetailUrl!)
             wkWebview!.loadRequest(articleDetailUrlReq)
         }

@@ -27,6 +27,10 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
         self.view.addSubview(articleTable)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var number = 0
         for (key, value) in articles {
@@ -48,6 +52,8 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
         articleCell.userLabel?.text = articles[indexPath.row]["author_nickname"].asString
         articleCell.loadMainImage(articles[indexPath.row]["image"].asString!)
         articleCell.loadUserImage(articles[indexPath.row]["author_image"].asString!)
+        
+        articleCell.selectionStyle = UITableViewCellSelectionStyle.None
         return articleCell
     }
     
