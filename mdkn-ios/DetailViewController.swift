@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController {
     
-    var webView: UIWebView!
+    var wkWebview: WKWebView?
+    var progressBar: UIProgressView?
     var screenHeight: CGFloat?
     var screenWidth: CGFloat?
     var objId: Int?
     var pageTitle: NSString?
     
-    let footerHeight:CGFloat = 50
+    let footerHeight:CGFloat = 50.0
+    let progressBarHeight: CGFloat = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +27,33 @@ class DetailViewController: UIViewController {
         screenHeight = self.view.bounds.height
         screenWidth = self.view.bounds.width
         initBackButton()
+        initProgressBar()
         initWebView()
     }
     
+    func initProgressBar() {
+        progressBar = UIProgressView(frame: CGRectMake(0, 0, screenWidth!, progressBarHeight))
+        progressBar!.progressTintColor = UIColor.mdknPinkColor()
+        progressBar!.trackTintColor = UIColor.whiteColor()
+        progressBar!.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        progressBar!.setProgress(2.0, animated: true)
+        self.view.addSubview(progressBar!)
+    }
+    
     func initWebView() {
-        webView = UIWebView(frame: CGRectMake(0, 0, screenWidth!, screenHeight!))
+        wkWebview = WKWebView(frame: CGRectMake(0, progressBarHeight, screenWidth!, screenHeight!))
         if let objIdNotOptional = objId {
-            var articleDetailUrl = NSURL(string: "http://kurashinista.jp/sp/articles/detail/" + objIdNotOptional.description)
+            var articleDetailUrl = NSURL(string: "http://kurashinista.jp/sp/articles/detail/" + objIdNotOptional.description + "#articles-with-the-same-category")
             var articleDetailUrlReq = NSURLRequest(URL: articleDetailUrl!)
-            webView.loadRequest(articleDetailUrlReq)
+            wkWebview!.loadRequest(articleDetailUrlReq)
         }
-        self.view.addSubview(webView)
+        self.view.addSubview(wkWebview!)
+        wkWebview?.addObserver(self, forKeyPath:"estimatedProgress", options:.New, context:nil)
     }
     
     func initBackButton() {
         let backButton = UIBarButtonItem(title: "＞　" + pageTitle!, style: UIBarButtonItemStyle.Plain, target: self, action: "back")
+        backButton.width = screenWidth! - 100
         backButton.tintColor = UIColor.mdknPinkColor()
         self.navigationItem.leftBarButtonItem = backButton
         self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HiraKakuProN-W6", size: 12)!], forState: UIControlState.Normal)
@@ -48,11 +63,27 @@ class DetailViewController: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     
+    override func observeValueForKeyPath(keyPath:String, ofObject object:AnyObject, change:[NSObject:AnyObject], context:UnsafeMutablePointer<Void>) {
+        switch keyPath {
+        case "estimatedProgress":
+            if let progress = change[NSKeyValueChangeNewKey] as? Float {
+                println("Progress:\(progress)")
+                progressBar?.progress
+            }
+        default:
+            break
+        }
+    }
+
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    deinit {
+        wkWebview?.removeObserver(self, forKeyPath: "estimatedProgress")
     }
 }
