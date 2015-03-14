@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A2BA7081A8EF63F0088B300 /* SwipeBetweenViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA7071A8EF63F0088B300 /* SwipeBetweenViewControllers.swift */; };
 		1A2BA70F1A8F2EBE0088B300 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA70D1A8F2EBE0088B300 /* ArticleTableViewCell.swift */; };
 		1A2BA71A1A8F653D0088B300 /* UIColor+mdkn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA7191A8F653D0088B300 /* UIColor+mdkn.swift */; };
 		1A2BA71C1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA71B1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift */; };
@@ -20,8 +19,11 @@
 		1A4E181A1A8B8DAF009D12F6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A4E18181A8B8DAF009D12F6 /* LaunchScreen.xib */; };
 		1A4E18261A8B8DAF009D12F6 /* mdkn_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */; };
 		1A4E18321A8BB001009D12F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E18311A8BB001009D12F6 /* DetailViewController.swift */; };
+		1A529F341AB3F646004240F2 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A529F331AB3F646004240F2 /* CAPSPageMenu.swift */; };
+		1A529F361AB3F670004240F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A529F351AB3F670004240F2 /* ViewController.swift */; };
 		1ABEE7A31A8BD58500082DD0 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABEE7A21A8BD58500082DD0 /* json.swift */; };
 		1AE74CF41A8FE4F300A769CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE74CF31A8FE4F300A769CB /* QuartzCore.framework */; };
+		BEBCC751E5E3F6E821536012 /* Pods_mdkn_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35437E3B19C84379E693534 /* Pods_mdkn_ios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A2BA7071A8EF63F0088B300 /* SwipeBetweenViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SwipeBetweenViewControllers.swift; path = ../../SwipeBetweenViewControllers/SwipeBetweenViewControllers/SwipeBetweenViewControllers.swift; sourceTree = "<group>"; };
 		1A2BA70D1A8F2EBE0088B300 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		1A2BA7191A8F653D0088B300 /* UIColor+mdkn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+mdkn.swift"; sourceTree = "<group>"; };
 		1A2BA71B1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleBigTableViewCell.swift; sourceTree = "<group>"; };
@@ -52,8 +53,15 @@
 		1A4E18241A8B8DAF009D12F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mdkn_iosTests.swift; sourceTree = "<group>"; };
 		1A4E18311A8BB001009D12F6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1A529F2D1AACAED0004240F2 /* Pods-mdkn-iosTests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Pods-mdkn-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A529F2E1AACAEF5004240F2 /* Pods-mdkn-iosTests.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Pods-mdkn-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A529F331AB3F646004240F2 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
+		1A529F351AB3F670004240F2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1ABEE7A21A8BD58500082DD0 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = json.swift; path = "../../swift-json/json/json.swift"; sourceTree = "<group>"; };
 		1AE74CF31A8FE4F300A769CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		372027CC0C82A959FBB7D20C /* Pods-mdkn-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdkn-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdkn-ios/Pods-mdkn-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		50E88460F6906FF91BD065CB /* Pods-mdkn-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdkn-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-mdkn-ios/Pods-mdkn-ios.release.xcconfig"; sourceTree = "<group>"; };
+		E35437E3B19C84379E693534 /* Pods_mdkn_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mdkn_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AE74CF41A8FE4F300A769CB /* QuartzCore.framework in Frameworks */,
+				BEBCC751E5E3F6E821536012 /* Pods_mdkn_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +99,8 @@
 				1A4E18091A8B8DAF009D12F6 /* mdkn-ios */,
 				1A4E18221A8B8DAF009D12F6 /* mdkn-iosTests */,
 				1A4E18081A8B8DAF009D12F6 /* Products */,
+				DFCF95EED24AABFC5E417169 /* Pods */,
+				78C2C4EE2A7AFADED3B8D0EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				1ABEE7A21A8BD58500082DD0 /* json.swift */,
+				1A529F331AB3F646004240F2 /* CAPSPageMenu.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -165,11 +177,30 @@
 		1AE74CF21A8FD86200A769CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1A2BA7071A8EF63F0088B300 /* SwipeBetweenViewControllers.swift */,
 				1A4E18111A8B8DAF009D12F6 /* ArticleViewController.swift */,
 				1A4E18311A8BB001009D12F6 /* DetailViewController.swift */,
+				1A529F351AB3F670004240F2 /* ViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		78C2C4EE2A7AFADED3B8D0EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E35437E3B19C84379E693534 /* Pods_mdkn_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFCF95EED24AABFC5E417169 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				372027CC0C82A959FBB7D20C /* Pods-mdkn-ios.debug.xcconfig */,
+				50E88460F6906FF91BD065CB /* Pods-mdkn-ios.release.xcconfig */,
+				1A529F2D1AACAED0004240F2 /* Pods-mdkn-iosTests.debug.xcconfig */,
+				1A529F2E1AACAEF5004240F2 /* Pods-mdkn-iosTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A4E18291A8B8DAF009D12F6 /* Build configuration list for PBXNativeTarget "mdkn-ios" */;
 			buildPhases = (
+				106417AB09CCEECDC1A1A712 /* Check Pods Manifest.lock */,
 				1A4E18031A8B8DAF009D12F6 /* Sources */,
 				1A4E18041A8B8DAF009D12F6 /* Frameworks */,
 				1A4E18051A8B8DAF009D12F6 /* Resources */,
+				2D07B9D3160A926A522F67EB /* Embed Pods Frameworks */,
+				240B8F647B164D1C265A44FF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +302,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		106417AB09CCEECDC1A1A712 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		240B8F647B164D1C265A44FF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mdkn-ios/Pods-mdkn-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D07B9D3160A926A522F67EB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mdkn-ios/Pods-mdkn-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A4E18031A8B8DAF009D12F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,11 +357,12 @@
 			files = (
 				1A4E18121A8B8DAF009D12F6 /* ArticleViewController.swift in Sources */,
 				1A4E18321A8BB001009D12F6 /* DetailViewController.swift in Sources */,
+				1A529F341AB3F646004240F2 /* CAPSPageMenu.swift in Sources */,
 				1ABEE7A31A8BD58500082DD0 /* json.swift in Sources */,
 				1A4E180D1A8B8DAF009D12F6 /* AppDelegate.swift in Sources */,
 				1A2BA71C1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift in Sources */,
+				1A529F361AB3F670004240F2 /* ViewController.swift in Sources */,
 				1A4E18101A8B8DAF009D12F6 /* mdkn_ios.xcdatamodeld in Sources */,
-				1A2BA7081A8EF63F0088B300 /* SwipeBetweenViewControllers.swift in Sources */,
 				1A2BA71E1A8FBE4C0088B300 /* Article1x1TableViewCell.swift in Sources */,
 				1A2BA70F1A8F2EBE0088B300 /* ArticleTableViewCell.swift in Sources */,
 				1A2BA71A1A8F653D0088B300 /* UIColor+mdkn.swift in Sources */,
@@ -403,6 +486,7 @@
 		};
 		1A4E182A1A8B8DAF009D12F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 372027CC0C82A959FBB7D20C /* Pods-mdkn-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "mdkn-ios/Info.plist";
@@ -413,6 +497,7 @@
 		};
 		1A4E182B1A8B8DAF009D12F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E88460F6906FF91BD065CB /* Pods-mdkn-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "mdkn-ios/Info.plist";

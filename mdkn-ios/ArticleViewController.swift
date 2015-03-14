@@ -10,14 +10,15 @@ import UIKit
 
 class ArticleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var parentNavigationController : UINavigationController?
+
     var toDetailObjId: Int?
     let articles = JSON.fromURL("http://sawa-admin.kan-wing.com/mdkn-ios-new.php")
-    let marginTop: CGFloat = 22
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var articleTable: UITableView = UITableView(frame: CGRectMake(0, marginTop, self.view.bounds.width, self.view.bounds.height))
+        var articleTable: UITableView = UITableView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
         articleTable.dataSource = self
         articleTable.delegate = self
         
@@ -62,14 +63,15 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
 
         var toDetailObjIdStr:String! = articles[indexPath.row]["articleId"].asString
         toDetailObjId = toDetailObjIdStr.toInt()
-        let detailViewController = DetailViewController()
+        var detailViewController = DetailViewController()
         detailViewController.objId = toDetailObjId
-        detailViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        self.presentViewController(detailViewController, animated: true, completion: nil)
+        detailViewController.pageTitle = articles[indexPath.row]["title"].asString
+        
+        parentNavigationController!.pushViewController(detailViewController, animated: true)
     }
     
     override func prefersStatusBarHidden() -> Bool {
-        return false
+        return true
     }
     
     override func didReceiveMemoryWarning() {

@@ -11,12 +11,10 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var webView: UIWebView!
-    var footerView: UIView!
-    var footerTopView: UIView!
-    var footerBackButton: UIButton!
     var screenHeight: CGFloat?
     var screenWidth: CGFloat?
     var objId: Int?
+    var pageTitle: NSString?
     
     let footerHeight:CGFloat = 50
     
@@ -25,8 +23,8 @@ class DetailViewController: UIViewController {
         
         screenHeight = self.view.bounds.height
         screenWidth = self.view.bounds.width
+        initBackButton()
         initWebView()
-        initFooterView()
     }
     
     func initWebView() {
@@ -39,30 +37,17 @@ class DetailViewController: UIViewController {
         self.view.addSubview(webView)
     }
     
-    func initFooterView() {
-        footerView = UIView(frame: CGRectMake(0, screenHeight! - footerHeight, screenWidth!, footerHeight))
-        footerView?.backgroundColor = UIColor.footerBackgroundColor()
-
-        // Add footer top line
-        footerTopView = UIView(frame: CGRectMake(0, 0, screenWidth!, 1))
-        footerTopView?.backgroundColor = UIColor.footerTopColor()
-        footerView.addSubview(footerTopView)
-
-        // Add back button
-        footerBackButton = UIButton(frame: CGRectMake(10, 5, 30, 40))
-        footerBackButton.setTitleColor(UIColor.footerBackButtonColor(), forState:.Normal)
-        footerBackButton.titleLabel!.font = UIFont(name: "HiraKakuProN-W6", size: 23);
-        footerBackButton.addTarget(self, action: "closeWindow:", forControlEvents: UIControlEvents.TouchUpInside)
-        footerBackButton.setTitle("＜", forState:UIControlState.Normal)
-        footerView.addSubview(footerBackButton)
-
-        self.view.addSubview(footerView)
+    func initBackButton() {
+        let backButton = UIBarButtonItem(title: "＞　" + pageTitle!, style: UIBarButtonItemStyle.Plain, target: self, action: "back")
+        backButton.tintColor = UIColor.mdknPinkColor()
+        self.navigationItem.leftBarButtonItem = backButton
+        self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "HiraKakuProN-W6", size: 12)!], forState: UIControlState.Normal)
     }
-
-    func closeWindow(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    
+    func back() {
+        navigationController?.popViewControllerAnimated(true)
     }
-
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
