@@ -12,11 +12,12 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var parentNavigationController : UINavigationController?
 
-    var toDetailObjId: Int?
-    let articles = JSON.fromURL("http://sawa-admin.kan-wing.com/mdkn-ios-new.php")
+    var list = ArticleList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        list.fetchArticles(NSString.apiArticles())
         
         var articleTable: UITableView = UITableView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
         articleTable.dataSource = self
@@ -32,11 +33,7 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var number = 0
-        for (key, value) in articles {
-            number++
-        }
-        return number
+        return list.articles.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -48,10 +45,11 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
             articleCell = tableView.dequeueReusableCellWithIdentifier("Article1x1TableViewCell") as Article1x1TableViewCell
         }
         
-        articleCell.titleLabel?.text = articles[indexPath.row]["title"].asString
-        articleCell.userLabel?.text = articles[indexPath.row]["author_nickname"].asString
-        articleCell.loadMainImage(articles[indexPath.row]["image"].asString!)
-        articleCell.loadUserImage(articles[indexPath.row]["author_image"].asString!)
+        var article: Article = list.articles[indexPath.row]
+        articleCell.titleLabel?.text = article.title
+        articleCell.userLabel?.text = article.user_nickname
+        articleCell.loadMainImage(article.main_image)
+        articleCell.loadUserImage(article.user_image)
         
         articleCell.selectionStyle = UITableViewCellSelectionStyle.None
         return articleCell
@@ -66,12 +64,11 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
-        var toDetailObjIdStr:String! = articles[indexPath.row]["articleId"].asString
-        toDetailObjId = toDetailObjIdStr.toInt()
+        
+        var article: Article = list.articles[indexPath.row]
         var detailViewController = DetailViewController()
-        detailViewController.objId = toDetailObjId
-        detailViewController.pageTitle = articles[indexPath.row]["title"].asString
+        detailViewController.pageUrl = NSString.webArtcileDetail(article.id!)
+        detailViewController.pageTitle = article.title
         
         parentNavigationController!.pushViewController(detailViewController, animated: true)
     }

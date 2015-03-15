@@ -33,7 +33,7 @@ class ViewController: UIViewController, CAPSPageMenuDelegate {
         controller1.title = "TOP"
         controllerArray.append(controller1)
         
-        var controller2 : ArticleViewController = ArticleViewController()
+        var controller2 : FeatureViewController = FeatureViewController()
         controller2.parentNavigationController = self.navigationController
         controller2.title = "特集"
         controllerArray.append(controller2)
@@ -74,55 +74,5 @@ class ViewController: UIViewController, CAPSPageMenuDelegate {
         pageMenu!.delegate = self
         
         self.view.addSubview(pageMenu!.view)
-    }
-    
-    // Uncomment below for some navbar color animation fun using the new delegate functions
-    
-    func didMoveToPage(controller: UIViewController, index: Int) {
-        println("did move to page")
-        
-        //        var color : UIColor = UIColor(red: 18.0/255.0, green: 150.0/255.0, blue: 225.0/255.0, alpha: 1.0)
-        //        var navColor : UIColor = UIColor(red: 17.0/255.0, green: 64.0/255.0, blue: 107.0/255.0, alpha: 1.0)
-        //
-        //        if index == 1 {
-        //            color = UIColor.orangeColor()
-        //            navColor = color
-        //        } else if index == 2 {
-        //            color = UIColor.grayColor()
-        //            navColor = color
-        //        } else if index == 3 {
-        //            color = UIColor.purpleColor()
-        //            navColor = color
-        //        }
-        //
-        //        UIView.animateWithDuration(0.5, animations: { () -> Void in
-        //            self.navigationController!.navigationBar.barTintColor = navColor
-        //        }) { (completed) -> Void in
-        //            println("did fade")
-        //        }
-    }
-    
-    func willMoveToPage(controller: UIViewController, index: Int) {
-        println("will move to page")
-        
-        //        var color : UIColor = UIColor(red: 18.0/255.0, green: 150.0/255.0, blue: 225.0/255.0, alpha: 1.0)
-        //        var navColor : UIColor = UIColor(red: 17.0/255.0, green: 64.0/255.0, blue: 107.0/255.0, alpha: 1.0)
-        //
-        //        if index == 1 {
-        //            color = UIColor.orangeColor()
-        //            navColor = color
-        //        } else if index == 2 {
-        //            color = UIColor.grayColor()
-        //            navColor = color
-        //        } else if index == 3 {
-        //            color = UIColor.purpleColor()
-        //            navColor = color
-        //        }
-        //
-        //        UIView.animateWithDuration(0.5, animations: { () -> Void in
-        //            self.navigationController!.navigationBar.barTintColor = navColor
-        //        }) { (completed) -> Void in
-        //            println("did fade")
-        //        }
     }
 }

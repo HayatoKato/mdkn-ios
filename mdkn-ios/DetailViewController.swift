@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     var progressBar: UIProgressView?
     var screenHeight: CGFloat?
     var screenWidth: CGFloat?
-    var objId: Int?
+    var pageUrl: String?
     var pageTitle: NSString?
     
     let footerHeight:CGFloat = 50.0
@@ -42,10 +42,10 @@ class DetailViewController: UIViewController {
     
     func initWebView() {
         wkWebview = WKWebView(frame: CGRectMake(0, progressBarHeight, screenWidth!, screenHeight!))
-        if let objIdNotOptional = objId {
-            var articleDetailUrl = NSURL(string: "http://kurashinista.jp/sp/articles/detail/" + objIdNotOptional.description)
-            var articleDetailUrlReq = NSURLRequest(URL: articleDetailUrl!)
-            wkWebview!.loadRequest(articleDetailUrlReq)
+        if let pageUrlNotOptional = pageUrl {
+            var detailUrl = NSURL(string: pageUrlNotOptional)
+            var detailUrlReq = NSURLRequest(URL: detailUrl!)
+            wkWebview!.loadRequest(detailUrlReq)
         }
         self.view.addSubview(wkWebview!)
         wkWebview?.addObserver(self, forKeyPath:"estimatedProgress", options:.New, context:nil)
