@@ -24,10 +24,12 @@ mdkn-ios
 
 1. Create Your Branch
 
-    When you do new feature development, you create a new branch off the master branch.
+    When you do new feature development, you create a new branch off the master branch:
+
         git checkout -b feature/my_new_branch
 
-    When you fix bug or modify specification, you create a hotfix branch off the master branch.
+    When you fix bug or modify specification, you create a hotfix branch off the master branch:
+
         git checkout -b hotfix/my_new_branch
 
 2. Update Your Branch
