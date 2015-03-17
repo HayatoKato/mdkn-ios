@@ -71,8 +71,6 @@
 		1A4E18241A8B8DAF009D12F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mdkn_iosTests.swift; sourceTree = "<group>"; };
 		1A4E18311A8BB001009D12F6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		1A529F2D1AACAED0004240F2 /* Pods-mdkn-iosTests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Pods-mdkn-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1A529F2E1AACAEF5004240F2 /* Pods-mdkn-iosTests.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Pods-mdkn-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		1A529F331AB3F646004240F2 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		1A529F351AB3F670004240F2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1ABEE7A21A8BD58500082DD0 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = json.swift; path = "../../swift-json/json/json.swift"; sourceTree = "<group>"; };
@@ -232,8 +230,6 @@
 			children = (
 				372027CC0C82A959FBB7D20C /* Pods-mdkn-ios.debug.xcconfig */,
 				50E88460F6906FF91BD065CB /* Pods-mdkn-ios.release.xcconfig */,
-				1A529F2D1AACAED0004240F2 /* Pods-mdkn-iosTests.debug.xcconfig */,
-				1A529F2E1AACAEF5004240F2 /* Pods-mdkn-iosTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
