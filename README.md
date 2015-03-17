@@ -11,7 +11,7 @@ mdkn-ios
 
         $ cd mdkn-ios
 
-3. Install the dependencies. (We use [CocoaPods](https://github.com/cocoapods/cocoapods) and [Carthage](https://github.com/Carthage/Carthage))
+3. Install the dependencies. (We use [CocoaPods](https://github.com/cocoapods/cocoapods))
 
         $ bundle install
         $ pod install
