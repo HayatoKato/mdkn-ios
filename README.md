@@ -1,7 +1,5 @@
-mdkn-ios!
+mdkn-ios
 ===
-
-[![Build Status](https://magnum.travis-ci.com/ookamiinc/ookami-ios.svg?token=cvnBZmgivv9MVd5ZztN5&branch=master)](https://magnum.travis-ci.com/ookamiinc/ookami-ios)
 
 ## Installation
 
