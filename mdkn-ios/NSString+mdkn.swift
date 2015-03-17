@@ -31,7 +31,7 @@ extension NSString {
     }
     
     class func webArtcileDetail(id: String) -> String {
-        return webURL() + "article/detail/" + id
+        return webURL() + "articles/detail/" + id
     }
     
     class func webFeatureDetail(id: String) -> String {
