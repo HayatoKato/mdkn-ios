@@ -32,6 +32,7 @@
 		1A529F361AB3F670004240F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A529F351AB3F670004240F2 /* ViewController.swift */; };
 		1A92019E1AB9B31500EF274C /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A92019D1AB9B31500EF274C /* json.swift */; };
 		1AE74CF41A8FE4F300A769CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE74CF31A8FE4F300A769CB /* QuartzCore.framework */; };
+		83E011391AC93AC0004BEA5B /* ArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E011381AC93AC0004BEA5B /* ArticleTests.swift */; };
 		BEBCC751E5E3F6E821536012 /* Pods_mdkn_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35437E3B19C84379E693534 /* Pods_mdkn_ios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		1AE74CF31A8FE4F300A769CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		372027CC0C82A959FBB7D20C /* Pods-mdkn-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdkn-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdkn-ios/Pods-mdkn-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		50E88460F6906FF91BD065CB /* Pods-mdkn-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdkn-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-mdkn-ios/Pods-mdkn-ios.release.xcconfig"; sourceTree = "<group>"; };
+		83E011381AC93AC0004BEA5B /* ArticleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTests.swift; sourceTree = "<group>"; };
 		E35437E3B19C84379E693534 /* Pods_mdkn_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mdkn_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 		1A4E18221A8B8DAF009D12F6 /* mdkn-iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				83E011371AC93A99004BEA5B /* Model */,
 				1A4E18251A8B8DAF009D12F6 /* mdkn_iosTests.swift */,
 				1A4E18231A8B8DAF009D12F6 /* Supporting Files */,
 			);
@@ -223,6 +226,14 @@
 				E35437E3B19C84379E693534 /* Pods_mdkn_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83E011371AC93A99004BEA5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83E011381AC93AC0004BEA5B /* ArticleTests.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		DFCF95EED24AABFC5E417169 /* Pods */ = {
@@ -413,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E011391AC93AC0004BEA5B /* ArticleTests.swift in Sources */,
 				1A4E18261A8B8DAF009D12F6 /* mdkn_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
