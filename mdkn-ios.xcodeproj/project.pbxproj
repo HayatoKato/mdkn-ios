@@ -113,13 +113,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		1A2BA7111A8F532D0088B300 /* Config */ = {
+		1A2BA7111A8F532D0088B300 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				1A2BA7191A8F653D0088B300 /* UIColor+mdkn.swift */,
 				1A27532E1AB5C4B300F0FA49 /* NSString+mdkn.swift */,
 			);
-			name = Config;
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		1A4E17FE1A8B8DAF009D12F6 = {
@@ -148,7 +148,7 @@
 			children = (
 				1A4E180C1A8B8DAF009D12F6 /* AppDelegate.swift */,
 				1ABEE79F1A8BCFF200082DD0 /* Source */,
-				1A2BA7111A8F532D0088B300 /* Config */,
+				1A2BA7111A8F532D0088B300 /* Extension */,
 				1A2753291AB5AB0400F0FA49 /* Model */,
 				1AE74CF21A8FD86200A769CB /* Controller */,
 				1AE74CF11A8FD84B00A769CB /* View */,

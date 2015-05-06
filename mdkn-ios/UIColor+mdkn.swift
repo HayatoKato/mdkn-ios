@@ -9,13 +9,13 @@ import UIKit
 
 extension UIColor {
     
-    /******************** Common Color ***************************/
+    // MARK: Common Color
     
     class func mdknPinkColor() -> UIColor {
         return UIColor(red:223/255.0, green:124/255.0, blue:170/255.0, alpha: 1.0)
     }
     
-    /******************** Header Area ****************************/
+    // MARK: Header Area
     
     class func headerColor() -> UIColor {
         return UIColor(red:253/255.0, green:253/255.0, blue:253/255.0, alpha: 1.0)
@@ -38,14 +38,14 @@ extension UIColor {
 
     }
     
-    /******************** Table Cell *****************************/
+    // MARK: Table Cell
     
     class func cellBackgroundColor() -> UIColor {
         return UIColor(red:254/255.0, green:254/255.0, blue:254/255.0, alpha: 1.0)
     }
     
-    /******************** Detail Page Footer **********************/
-    
+    // MARK: Detail Page Footer
+
     class func footerBackgroundColor() -> UIColor {
         return UIColor(red:255/255.0, green:255/255.0, blue:255/255.0, alpha: 0.9)
     }
