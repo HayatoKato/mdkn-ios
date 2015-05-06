@@ -12,12 +12,12 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var parentNavigationController : UINavigationController?
 
-    var list = ArticleList()
+    var aritcleService = ArticleService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        list.fetchArticles(NSString.apiArticles())
+        aritcleService.fetchArticles(NSString.apiArticles())
         
         var articleTable: UITableView = UITableView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
         articleTable.dataSource = self
@@ -33,7 +33,7 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.articles.count
+        return aritcleService.articles.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -45,7 +45,7 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
             articleCell = tableView.dequeueReusableCellWithIdentifier("Article1x1TableViewCell") as Article1x1TableViewCell
         }
         
-        var article: Article = list.articles[indexPath.row]
+        var article: Article = aritcleService.articles[indexPath.row]
         articleCell.titleLabel?.text = article.title
         articleCell.userLabel?.text = article.user_nickname
         articleCell.loadMainImage(article.main_image)
@@ -65,7 +65,7 @@ class ArticleViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var article: Article = list.articles[indexPath.row]
+        var article: Article = aritcleService.articles[indexPath.row]
         var detailViewController = DetailViewController()
         detailViewController.pageUrl = NSString.webArtcileDetail(article.id!)
         detailViewController.pageTitle = article.title

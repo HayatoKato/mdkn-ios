@@ -1,12 +1,12 @@
 //
-//  FeatureList.swift
+//  FeatureService.swift
 //  mdkn-ios
 //
 //  Created by Hayato Kato on 2015/03/15.
 //  Copyright (c) 2015年 Hayato Kato. All rights reserved.
 //
 
-public class FeatureList {
+public class FeatureService {
     public var features = [Feature]()
     
     public init() {

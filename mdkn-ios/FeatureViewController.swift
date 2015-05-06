@@ -12,12 +12,12 @@ class FeatureViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var parentNavigationController : UINavigationController?
     
-    var list = FeatureList()
+    var featureService = FeatureService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        list.fetchFeatures(NSString.apiFeatures())
+        featureService.fetchFeatures(NSString.apiFeatures())
         
         var featureTable: UITableView = UITableView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
         featureTable.dataSource = self
@@ -33,7 +33,7 @@ class FeatureViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.features.count
+        return featureService.features.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -45,7 +45,7 @@ class FeatureViewController: UIViewController, UITableViewDataSource, UITableVie
             featureCell = tableView.dequeueReusableCellWithIdentifier("Feature1x1TableViewCell") as Feature1x1TableViewCell
         }
         
-        var feature: Feature = list.features[indexPath.row]
+        var feature: Feature = featureService.features[indexPath.row]
         featureCell.titleLabel?.text = feature.title
         featureCell.loadMainImage(feature.main_image)
         
@@ -63,7 +63,7 @@ class FeatureViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var feature: Feature = list.features[indexPath.row]
+        var feature: Feature = featureService.features[indexPath.row]
         var detailViewController = DetailViewController()
         detailViewController.pageUrl = NSString.webFeatureDetail(feature.id!)
         detailViewController.pageTitle = feature.title

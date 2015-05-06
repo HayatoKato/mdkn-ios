@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1A27532B1AB5AB4400F0FA49 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27532A1AB5AB4400F0FA49 /* Article.swift */; };
-		1A27532D1AB5AFA800F0FA49 /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27532C1AB5AFA800F0FA49 /* ArticleList.swift */; };
+		1A27532D1AB5AFA800F0FA49 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27532C1AB5AFA800F0FA49 /* ArticleService.swift */; };
 		1A27532F1AB5C4B300F0FA49 /* NSString+mdkn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27532E1AB5C4B300F0FA49 /* NSString+mdkn.swift */; };
 		1A2753311AB5D58700F0FA49 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2753301AB5D58700F0FA49 /* FeatureViewController.swift */; };
 		1A2753331AB5D60E00F0FA49 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2753321AB5D60E00F0FA49 /* Feature.swift */; };
-		1A2753351AB5D61900F0FA49 /* FeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2753341AB5D61900F0FA49 /* FeatureList.swift */; };
+		1A2753351AB5D61900F0FA49 /* FeatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2753341AB5D61900F0FA49 /* FeatureService.swift */; };
 		1A2753371AB5D77300F0FA49 /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2753361AB5D77300F0FA49 /* FeatureTableViewCell.swift */; };
 		1A2753391AB5D78800F0FA49 /* Feature1x1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2753381AB5D78800F0FA49 /* Feature1x1TableViewCell.swift */; };
 		1A27533B1AB5D79C00F0FA49 /* FeatureBigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27533A1AB5D79C00F0FA49 /* FeatureBigTableViewCell.swift */; };
@@ -48,11 +48,11 @@
 
 /* Begin PBXFileReference section */
 		1A27532A1AB5AB4400F0FA49 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		1A27532C1AB5AFA800F0FA49 /* ArticleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
+		1A27532C1AB5AFA800F0FA49 /* ArticleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		1A27532E1AB5C4B300F0FA49 /* NSString+mdkn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+mdkn.swift"; sourceTree = "<group>"; };
 		1A2753301AB5D58700F0FA49 /* FeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewController.swift; sourceTree = "<group>"; };
 		1A2753321AB5D60E00F0FA49 /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
-		1A2753341AB5D61900F0FA49 /* FeatureList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureList.swift; sourceTree = "<group>"; };
+		1A2753341AB5D61900F0FA49 /* FeatureService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureService.swift; sourceTree = "<group>"; };
 		1A2753361AB5D77300F0FA49 /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
 		1A2753381AB5D78800F0FA49 /* Feature1x1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature1x1TableViewCell.swift; sourceTree = "<group>"; };
 		1A27533A1AB5D79C00F0FA49 /* FeatureBigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureBigTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,10 +105,9 @@
 		1A2753291AB5AB0400F0FA49 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A8B08F31AF9E3C500029C55 /* Service */,
 				1A27532A1AB5AB4400F0FA49 /* Article.swift */,
-				1A27532C1AB5AFA800F0FA49 /* ArticleList.swift */,
 				1A2753321AB5D60E00F0FA49 /* Feature.swift */,
-				1A2753341AB5D61900F0FA49 /* FeatureList.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -185,6 +184,15 @@
 				1A4E18241A8B8DAF009D12F6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A8B08F31AF9E3C500029C55 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1A27532C1AB5AFA800F0FA49 /* ArticleService.swift */,
+				1A2753341AB5D61900F0FA49 /* FeatureService.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		1ABEE79F1A8BCFF200082DD0 /* Source */ = {
@@ -409,10 +417,10 @@
 				1A4E180D1A8B8DAF009D12F6 /* AppDelegate.swift in Sources */,
 				1A2BA71C1A8FB8FD0088B300 /* ArticleBigTableViewCell.swift in Sources */,
 				1A529F361AB3F670004240F2 /* ViewController.swift in Sources */,
-				1A2753351AB5D61900F0FA49 /* FeatureList.swift in Sources */,
+				1A2753351AB5D61900F0FA49 /* FeatureService.swift in Sources */,
 				1A4E18101A8B8DAF009D12F6 /* mdkn_ios.xcdatamodeld in Sources */,
 				1A2753371AB5D77300F0FA49 /* FeatureTableViewCell.swift in Sources */,
-				1A27532D1AB5AFA800F0FA49 /* ArticleList.swift in Sources */,
+				1A27532D1AB5AFA800F0FA49 /* ArticleService.swift in Sources */,
 				1A2BA71E1A8FBE4C0088B300 /* Article1x1TableViewCell.swift in Sources */,
 				1A2BA70F1A8F2EBE0088B300 /* ArticleTableViewCell.swift in Sources */,
 				1A2BA71A1A8F653D0088B300 /* UIColor+mdkn.swift in Sources */,
